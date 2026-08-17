@@ -526,72 +526,103 @@
         </div>
     </section>
 
-    <!-- 🕌 INFO HARIAN: KALENDER, JAM, CUACA, BERITA -->
-    <section id="info" class="py-20 md:py-28 bg-gradient-to-b from-amber-50 to-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-accent font-medium text-sm">Informasi Harian</span>
-                <h2 class="font-display text-3xl md:text-4xl font-bold gradient-text mt-2">Kalender & Info Terkini</h2>
-                <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
-            </div>
+    <!--⚡ SCRIPT INFO HARIAN: JAM, KALENDER, CUACA, BERITA -->
+    <script>
+        // === 1. JAM & TANGGAL ===
+        function updateJam() {
+            const sekarang = new Date();
+            const jam = sekarang.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+            const hari = ['Minggu','Senin','Selasa','Rabu','Kamis','Jumat','Sabtu'][sekarang.getDay()];
+            const tgl = sekarang.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+            document.getElementById('jam').textContent = jam;
+            document.getElementById('tanggal').textContent = `${hari}, ${tgl}`;
+        }
+        setInterval(updateJam, 1000);
+        updateJam();
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-                <!-- Jam & Tanggal -->
-                <div class="bg-white p-6 rounded-2xl shadow-elegant text-center">
-                    <i class="fa fa-clock-o text-3xl text-primary mb-3"></i>
-                    <div id="jam" class="text-3xl font-bold text-primary">--:--:--</div>
-                    <div id="tanggal" class="text-stone-600 mt-2">-- Hari -- ----</div>
-                </div>
+        // === 2. KALENDER ISLAM ===
+        async function ambilKalenderIslam() {
+            try {
+                const tgl = new Date();
+                const res = await fetch(`https://api.aladhan.com/v1/gToH?date=${tgl.getDate()}-${tgl.getMonth()+1}-${tgl.getFullYear()}`);
+                const data = await res.json();
+                if (data.code === 200) {
+                    const hijri = data.data.hijri;
+                    document.getElementById('kalender-islam').textContent = 
+                        `${hijri.day} ${hijri.month.en} ${hijri.year} H`;
+                }
+            } catch {
+                document.getElementById('kalender-islam').textContent = 'Tidak dapat dimuat';
+            }
+        }
+        ambilKalenderIslam();
 
-                <!-- Kalender Islam & Jawa -->
-                <div class="bg-white p-6 rounded-2xl shadow-elegant text-center">
-                    <i class="fa fa-moon-o text-3xl text-green-600 mb-3"></i>
-                    <h4 class="font-bold text-primary mb-2">Kalender Islam & Jawa</h4>
-                    <div id="kalender-islam" class="text-stone-700 font-medium">-- ------ ---- H</div>
-                    <div id="kalender-jawa" class="text-stone-600 text-sm mt-1">-- ------ ---- J</div>
-                    <div id="weton" class="text-stone-500 text-sm mt-1">Weton: --</div>
-                </div>
+        // === 3. KALENDER JAWA & WETON ===
+        function kalenderJawaDanWeton() {
+            const tgl = new Date();
+            const hariKe = Math.floor((tgl.getTime() / 86400000) + 3) % 5;
+            const pasaran = ['Legi','Pahing','Pon','Wage','Kliwon'];
+            const namaBulanJawa = ['Sura','Sapar','Mulud','Bakda Mulud','Jumadil Awal','Jumadil Akhir','Rejeb','Ruwah','Puasa','Sawal','Apit','Besar'];
+            const namaHariJawa = ['Dhadha','Soma','Anggara','Budha','Wrespati','Sukra','Saniscara'];
+            
+            const hariMasehi = tgl.getDay();
+            const weton = pasaran[(hariMasehi + hariKe) % 5];
+            const bulan = namaBulanJawa[Math.floor((tgl.getMonth() + 4) % 12)];
+            const tahun = 1928 + Math.floor((tgl.getFullYear() + (tgl.getMonth() >= 8 ? 1 : 0) - 1928) / 1);
 
-                <!-- Cuaca Lumajang -->
-                <div class="bg-white p-6 rounded-2xl shadow-elegant text-center">
-                    <i class="fa fa-map-marker text-primary mb-1"></i>
-                    <span class="text-sm text-stone-500">Lumajang</span>
-                    <div class="flex items-center justify-center gap-2 my-2">
-                        <i id="cuaca-icon" class="fa fa-sun-o text-3xl text-yellow-500"></i>
-                        <span id="suhu" class="text-4xl font-bold text-dark">--°C</span>
-                    </div>
-                    <p id="kondisi-cuaca" class="text-stone-600">Sedang memuat...</p>
-                </div>
+            document.getElementById('kalender-jawa').textContent = 
+                `${tgl.getDate()} ${bulan} ${tahun} J`;
+            document.getElementById('weton').textContent = 
+                `Weton: ${namaHariJawa[hariMasehi]} ${weton}`;
+        }
+        kalenderJawaDanWeton();
 
-                <!-- Berita Terkini -->
-                <div class="bg-white p-6 rounded-2xl shadow-elegant">
-                    <div class="text-center mb-3">
-                        <i class="fa fa-newspaper-o text-3xl text-primary"></i>
-                        <h4 class="font-bold text-primary mt-2">Berita Terkini</h4>
-                    </div>
-                    <ul id="berita" class="space-y-2 text-sm text-stone-600">
-                        <li class="flex items-start gap-2"><i class="fa fa-circle text-xs text-primary mt-1.5"></i>Memuat berita...</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+        // === 4. CUACA LUMAJANG ===
+        async function ambilCuaca() {
+            try {
+                // Gunakan API cuaca terbuka
+                const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-8.23&longitude=113.24&current=temperature_2m,weather_code&timezone=Asia%2FJakarta');
+                const data = await res.json();
+                const suhu = Math.round(data.current.temperature_2m);
+                const kodeCuaca = data.current.weather_code;
 
-    <!-- KONTAK & LOKASI -->
-    <section id="kontak" class="py-20 md:py-28">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16">
-                <span class="text-accent font-medium text-sm">Hubungi Kami</span>
-                <h2 class="font-display text-3xl md:text-4xl font-bold gradient-text mt-2">Kontak & Lokasi</h2>
-                <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
-            </div>
-            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
-                <div class="space-y-6">
-                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm">
-                        <i class="fa fa-map-marker text-xl text-primary mt-1"></i>
-                        <div>
-                            <h4 class="font-bold text-primary mb-1">Alamat Kantor & Workshop</h4>
-                            <p class="text-stone-600">Jl. Mayor Kamari Sampurno No. 58, Kelurahan Ditotrunan, Kec. Lumajang, Kab. Lumajang, Jawa Timur — Kode Pos 67313</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl
+                // Tentukan ikon & kondisi
+                let ikon = 'fa-sun-o', kondisi = 'Cerah';
+                if (kodeCuaca >= 45) { ikon = 'fa-cloud'; kondisi = 'Berawan'; }
+                if (kodeCuaca >= 51 && kodeCuaca <= 67) { ikon = 'fa-tint'; kondisi = 'Hujan'; }
+                if (kodeCuaca >= 71) { ikon = 'fa-cloud-rain'; kondisi = 'Hujan Lebat'; }
+
+                document.getElementById('suhu').textContent = `${suhu}°C`;
+                document.getElementById('cuaca-icon').className = `fa ${ikon} text-3xl ${kodeCuaca >=45 ? 'text-gray-500' : 'text-yellow-500'}`;
+                document.getElementById('kondisi-cuaca').textContent = kondisi;
+            } catch {
+                document.getElementById('suhu').textContent = '--°C';
+                document.getElementById('kondisi-cuaca').textContent = 'Gagal memuat';
+            }
+        }
+        ambilCuaca();
+
+        // === 5. BERITA TERKINI ===
+        async function ambilBerita() {
+            try {
+                const res = await fetch('https://api.sauravkumar.xyz/news?country=id&api-key=demo');
+                const data = await res.json();
+                const daftar = document.getElementById('berita');
+                daftar.innerHTML = '';
+                if (data.articles && data.articles.length > 0) {
+                    data.articles.slice(0,4).forEach(berita => {
+                        const li = document.createElement('li');
+                        li.className = 'flex items-start gap-2';
+                        li.innerHTML = `<i class="fa fa-circle text-xs text-primary mt-1.5"></i><span>${berita.title?.substring(0,55)}...</span>`;
+                        daftar.appendChild(li);
+                    });
+                } else {
+                    daftar.innerHTML = '<li class="flex items-start gap-2"><i class="fa fa-circle text-xs text-primary mt-1.5"></i><span>Berita tidak tersedia</span></li>';
+                }
+            } catch {
+                document.getElementById('berita').innerHTML = 
+                    '<li class="flex items-start gap-2"><i class="fa fa-circle text-xs text-primary mt-1.5"></i><span>Silakan cek sebentar lagi</span></li>';
+            }
+        }
+        ambilBerita();
+    </script>
