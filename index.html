@@ -42,7 +42,6 @@
             .hero-bg { background: linear-gradient(rgba(28, 25, 23, 0.85), rgba(28, 25, 23, 0.75)), url('https://picsum.photos/id/1067/1920/1080'); background-size: cover; background-position: center; background-attachment: fixed; }
             .price-popular { transform: scale(1.03); border-width: 2px; border-color: #B45309; }
             .scroll-smooth { scroll-behavior: smooth; }
-            .grid-dots { background-image: radial-gradient(#78350F15 1px, transparent 1px); background-size: 20px 20px; }
         }
     </style>
 </head>
@@ -174,7 +173,7 @@
         </div>
     </section>
 
-    <!-- 📋 RIWAYAT PROYEK BARU DITAMBAHKAN -->
+    <!-- RIWAYAT PROYEK -->
     <section id="proyek" class="py-20 md:py-28 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
@@ -275,14 +274,13 @@
         </div>
     </section>
 
-    <!-- DAFTAR HARGA LENGKAP -->
+    <!-- DAFTAR HARGA -->
     <section id="harga" class="py-20 md:py-28">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16">
                 <span class="text-accent font-medium text-sm">Harga Terbaru & Transparan</span>
                 <h2 class="font-display text-3xl md:text-4xl font-bold gradient-text mt-2">Daftar Harga Layanan & Produk</h2>
                 <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
-                <p class="text-stone-600 mt-3 max-w-2xl mx-auto">Semua harga jelas dan transparan. Pengerjaan oleh kami berhak mendapat potongan harga khusus.</p>
             </div>
 
             <!-- DESAIN BANGUNAN -->
@@ -291,7 +289,6 @@
                     <i class="fa fa-building"></i> Biaya Desain Bangunan (Gedung, Kantor, atau Rumah)
                 </h3>
                 <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                    <!-- Paket A -->
                     <div class="bg-white p-7 rounded-2xl shadow-elegant card-hover relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-1 bg-primary"></div>
                         <h4 class="font-display text-xl font-bold text-center text-primary mb-2">Paket A</h4>
@@ -301,11 +298,9 @@
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Gambar 3 Dimensi</span></li>
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>RAB Bangunan</span></li>
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Revisi desain 2 kali</span></li>
-                            <li class="text-stone-500 italic pt-1 ml-5">Selebihnya: +Rp 3.000/m² (area direvisi saja)</li>
+                            <li class="text-stone-500 italic pt-1 ml-5">Selebihnya: +Rp 3.000/m²</li>
                         </ul>
                     </div>
-
-                    <!-- Paket B - REKOMENDASI -->
                     <div class="bg-white p-7 rounded-2xl shadow-premium card-hover price-popular relative overflow-hidden z-10">
                         <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-secondary"></div>
                         <div class="absolute top-3 right-3 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">POPULER</div>
@@ -317,31 +312,20 @@
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>RAB Bangunan</span></li>
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Video Animasi</span></li>
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Revisi desain 3 kali</span></li>
-                            <li class="text-stone-500 italic pt-1 ml-5">Selebihnya: +Rp 5.000/m² (area direvisi saja)</li>
                         </ul>
                     </div>
-
-                    <!-- Paket C -->
                     <div class="bg-white p-7 rounded-2xl shadow-elegant card-hover relative overflow-hidden">
                         <div class="absolute top-0 left-0 w-full h-1 bg-dark"></div>
                         <h4 class="font-display text-xl font-bold text-center text-primary mb-2">Paket C</h4>
                         <p class="text-center text-3xl font-bold text-dark mb-4">Rp 100.000<span class="text-base font-normal text-stone-500">/m²</span></p>
                         <ul class="space-y-2.5 text-sm text-stone-700">
-                            <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Gambar 2 Dimensi (Gambar Kerja)</span></li>
-                            <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Gambar 3 Dimensi</span></li>
+                            <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Gambar 2D (Gambar Kerja)</span></li>
+                            <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Gambar 3D</span></li>
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Video Animasi</span></li>
-                            <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Video 4 Dimensi (Mode Camera V-Ray)</span></li>
+                            <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Video 4D (V-Ray)</span></li>
                             <li class="flex items-start gap-2"><i class="fa fa-check text-green-500 mt-1"></i><span>Revisi desain 4 kali</span></li>
-                            <li class="text-stone-500 italic pt-1 ml-5">Selebihnya: +Rp 7.500/m² (area direvisi saja)</li>
                         </ul>
                     </div>
-                </div>
-
-                <div class="max-w-3xl mx-auto mt-8 p-4 bg-amber-50 border border-amber-200 rounded-xl text-center">
-                    <p class="text-stone-700 font-medium">
-                        <i class="fa fa-tag text-primary mr-2"></i>
-                        <strong>💡 Potongan Harga Spesial!</strong> Jika bangunan dikerjakan oleh kami → <strong class="text-primary">Diskon 30%</strong> dari total biaya desain
-                    </p>
                 </div>
             </div>
 
@@ -357,20 +341,14 @@
                         <li class="flex items-start gap-3"><i class="fa fa-check-circle text-green-500 mt-1"></i><span>Desain 3 Dimensi</span></li>
                         <li class="flex items-start gap-3"><i class="fa fa-check-circle text-green-500 mt-1"></i><span>RAB Interior</span></li>
                         <li class="flex items-start gap-3"><i class="fa fa-check-circle text-green-500 mt-1"></i><span>Revisi desain 3 kali</span></li>
-                        <li class="text-stone-500 italic ml-7">Selebihnya dikenakan biaya tambahan Rp 5.000/m²</li>
                     </ul>
-                    <div class="mt-6 p-4 bg-green-50 rounded-xl text-center border border-green-100">
-                        <p class="text-stone-700">
-                            <strong>🎁 Potongan Khusus:</strong> Jika pengerjaan interior dikerjakan oleh kami → <strong class="text-primary">Diskon 30% s/d 100%</strong> dari total biaya desain (tergantung masa promo yang berlaku)
-                        </p>
-                    </div>
                 </div>
             </div>
 
             <!-- PRODUK CUSTOM -->
             <div>
                 <h3 class="text-xl font-bold text-primary mb-8 text-center flex items-center justify-center gap-2">
-                    <i class="fa fa-shopping-bag"></i> Daftar Harga Produk Interior Custom
+                    <i class="fa fa-shopping-bag"></i> Daftar Harga Produk Custom
                 </h3>
                 <div class="max-w-2xl mx-auto bg-white p-8 rounded-2xl shadow-premium">
                     <div class="overflow-hidden rounded-xl border border-stone-100">
@@ -382,30 +360,14 @@
                                 </tr>
                             </thead>
                             <tbody class="divide-y divide-stone-100">
-                                <tr>
-                                    <td class="py-4 px-6 font-medium">Wardrobe</td>
-                                    <td class="py-4 px-6 font-bold text-primary text-right">Rp 2.100.000 /m²</td>
-                                </tr>
-                                <tr class="bg-stone-50/50">
-                                    <td class="py-4 px-6 font-medium">Kitchen Set</td>
-                                    <td class="py-4 px-6 font-bold text-primary text-right">Rp 2.100.000 /m¹</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-4 px-6 font-medium">Backdrop</td>
-                                    <td class="py-4 px-6 font-bold text-primary text-right">Rp 650.000 — 950.000</td>
-                                </tr>
-                                <tr class="bg-stone-50/50">
-                                    <td class="py-4 px-6 font-medium">Wallpaper</td>
-                                    <td class="py-4 px-6 font-bold text-primary text-right">Mulai Rp 350.000 /roll</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-4 px-6 font-medium">Vinyl Lantai</td>
-                                    <td class="py-4 px-6 font-bold text-primary text-right">Mulai Rp 350.000 /m²</td>
-                                </tr>
+                                <tr><td class="py-4 px-6">Wardrobe</td><td class="py-4 px-6 font-bold text-primary text-right">Rp 2.100.000 /m²</td></tr>
+                                <tr class="bg-stone-50/50"><td class="py-4 px-6">Kitchen Set</td><td class="py-4 px-6 font-bold text-primary text-right">Rp 2.100.000 /m¹</td></tr>
+                                <tr><td class="py-4 px-6">Backdrop</td><td class="py-4 px-6 font-bold text-primary text-right">Rp 650.000 — 950.000</td></tr>
+                                <tr class="bg-stone-50/50"><td class="py-4 px-6">Wallpaper</td><td class="py-4 px-6 font-bold text-primary text-right">Mulai Rp 350.000 /roll</td></tr>
+                                <tr><td class="py-4 px-6">Vinyl Lantai</td><td class="py-4 px-6 font-bold text-primary text-right">Mulai Rp 350.000 /m²</td></tr>
                             </tbody>
                         </table>
                     </div>
-                    <p class="text-center text-stone-500 text-sm mt-4">* Harga dapat berubah sewaktu-waktu. Konsultasikan untuk ukuran dan spesifikasi lengkap.</p>
                 </div>
             </div>
         </div>
@@ -418,44 +380,19 @@
                 <span class="text-accent font-medium text-sm">Karya Kami</span>
                 <h2 class="font-display text-3xl md:text-4xl font-bold gradient-text mt-2">Galeri Foto Proyek</h2>
                 <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
-                <p class="text-stone-600 mt-3">Ganti URL gambar di kode dengan foto hasil kerja LMJ yang sebenarnya</p>
             </div>
             <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5 max-w-6xl mx-auto">
                 <div class="group relative overflow-hidden rounded-2xl shadow-md card-hover">
-                    <img src="https://picsum.photos/id/106/600/400" alt="Desain Ruang Tamu" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h4 class="text-white font-medium p-5">Desain Ruang Tamu</h4>
-                    </div>
+                    <img src="https://picsum.photos/id/106/600/400" alt="Desain Ruang Tamu" class="w-full h-56 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"><h4 class="text-white font-medium p-5">Desain Ruang Tamu</h4></div>
                 </div>
                 <div class="group relative overflow-hidden rounded-2xl shadow-md card-hover">
-                    <img src="https://picsum.photos/id/186/600/400" alt="Lemari & Wardrobe Custom" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h4 class="text-white font-medium p-5">Wardrobe Custom</h4>
-                    </div>
+                    <img src="https://picsum.photos/id/186/600/400" alt="Wardrobe Custom" class="w-full h-56 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"><h4 class="text-white font-medium p-5">Wardrobe Custom</h4></div>
                 </div>
                 <div class="group relative overflow-hidden rounded-2xl shadow-md card-hover">
-                    <img src="https://picsum.photos/id/139/600/400" alt="Renovasi Rumah" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h4 class="text-white font-medium p-5">Renovasi Rumah</h4>
-                    </div>
-                </div>
-                <div class="group relative overflow-hidden rounded-2xl shadow-md card-hover">
-                    <img src="https://picsum.photos/id/164/600/400" alt="Desain Tampak Depan Bangunan" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h4 class="text-white font-medium p-5">Desain Tampak Depan</h4>
-                    </div>
-                </div>
-                <div class="group relative overflow-hidden rounded-2xl shadow-md card-hover">
-                    <img src="https://picsum.photos/id/157/600/400" alt="Desain Kamar Tidur" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h4 class="text-white font-medium p-5">Desain Kamar Tidur</h4>
-                    </div>
-                </div>
-                <div class="group relative overflow-hidden rounded-2xl shadow-md card-hover">
-                    <img src="https://picsum.photos/id/110/600/400" alt="Pintu & Jendela Custom" class="w-full h-56 object-cover transition-transform duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end">
-                        <h4 class="text-white font-medium p-5">Pintu & Jendela</h4>
-                    </div>
+                    <img src="https://picsum.photos/id/139/600/400" alt="Renovasi Rumah" class="w-full h-56 object-cover">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end"><h4 class="text-white font-medium p-5">Renovasi Rumah</h4></div>
                 </div>
             </div>
         </div>
@@ -470,19 +407,15 @@
                 <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
             </div>
             <div class="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-                <a href="https://www.tiktok.com/@lumajanginterior?_r=1&_t=ZS-98trtHRwCO8" target="_blank" class="bg-white p-8 rounded-2xl shadow-elegant card-hover text-center group">
-                    <div class="w-20 h-20 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-black/10 transition-colors">
-                        <i class="fa fa-play-circle text-4xl text-black"></i>
-                    </div>
+                <a href="https://www.tiktok.com/@lumajanginterior" target="_blank" class="bg-white p-8 rounded-2xl shadow-elegant card-hover text-center">
+                    <i class="fa fa-play-circle text-4xl text-black mb-4"></i>
                     <h4 class="font-display text-xl font-bold mb-2">@lumajanginterior</h4>
-                    <p class="text-stone-600">Klik untuk lihat video desain interior & furnitur</p>
+                    <p class="text-stone-600">Klik untuk lihat video desain interior</p>
                 </a>
-                <a href="https://www.tiktok.com/@lmjkontraktor?_r=1&_t=ZS-98trxorUUXy" target="_blank" class="bg-white p-8 rounded-2xl shadow-elegant card-hover text-center group">
-                    <div class="w-20 h-20 bg-black/5 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-black/10 transition-colors">
-                        <i class="fa fa-play-circle text-4xl text-black"></i>
-                    </div>
+                <a href="https://www.tiktok.com/@lmjkontraktor" target="_blank" class="bg-white p-8 rounded-2xl shadow-elegant card-hover text-center">
+                    <i class="fa fa-play-circle text-4xl text-black mb-4"></i>
                     <h4 class="font-display text-xl font-bold mb-2">@lmjkontraktor</h4>
-                    <p class="text-stone-600">Klik untuk lihat video proses proyek bangunan</p>
+                    <p class="text-stone-600">Klik untuk lihat video proyek bangunan</p>
                 </a>
             </div>
         </div>
@@ -498,35 +431,145 @@
             </div>
             <div class="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                 <div class="bg-light p-7 rounded-2xl shadow-sm card-hover border border-amber-50">
-                    <div class="text-yellow-400 text-lg mb-4">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                    </div>
-                    <p class="text-stone-600 italic mb-5">"Sesuai keinginan, hasilnya sangat bagus. Pemiliknya sangat ramah dan pelayanannya memuaskan."</p>
+                    <div class="text-yellow-400 text-lg mb-4"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="text-stone-600 italic mb-5">"Sesuai keinginan, hasilnya sangat bagus. Pemiliknya sangat ramah."</p>
                     <h4 class="font-bold text-primary">Yunita Novia</h4>
                     <p class="text-sm text-stone-500">Pelanggan — Lumajang</p>
                 </div>
                 <div class="bg-light p-7 rounded-2xl shadow-sm card-hover border border-amber-50">
-                    <div class="text-yellow-400 text-lg mb-4">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                    </div>
-                    <p class="text-stone-600 italic mb-5">"Pesanan interior dan sofa bagus sekali. Pelayanan cepat, harga wajar, pengerjaan rapi. Terima kasih LMJ!"</p>
+                    <div class="text-yellow-400 text-lg mb-4"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="text-stone-600 italic mb-5">"Pelayanan cepat, harga wajar, pengerjaan rapi. Terima kasih LMJ!"</p>
                     <h4 class="font-bold text-primary">Laila Qudriyah</h4>
                     <p class="text-sm text-stone-500">Pelanggan — Lumajang</p>
                 </div>
                 <div class="bg-light p-7 rounded-2xl shadow-sm card-hover border border-amber-50">
-                    <div class="text-yellow-400 text-lg mb-4">
-                        <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                    </div>
-                    <p class="text-stone-600 italic mb-5">"Cepat, rapi, dan sesuai desain. Pemilik sangat ramah. Sangat memuaskan!"</p>
+                    <div class="text-yellow-400 text-lg mb-4"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                    <p class="text-stone-600 italic mb-5">"Cepat, rapi, dan sesuai desain. Sangat memuaskan!"</p>
                     <h4 class="font-bold text-primary">Nita Iragusta</h4>
                     <p class="text-sm text-stone-500">Pelanggan — Lumajang</p>
                 </div>
             </div>
-            <p class="text-center text-stone-500 mt-8 text-sm">Berdasarkan ulasan di Google Maps ⭐ 5.0 dari 5 ulasan</p>
         </div>
     </section>
 
-    <!--⚡ SCRIPT INFO HARIAN: JAM, KALENDER, CUACA, BERITA -->
+    <!-- INFO HARIAN: KALENDER, JAM, CUACA, BERITA -->
+    <section id="info" class="py-20 md:py-28 bg-gradient-to-b from-amber-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-accent font-medium text-sm">Informasi Harian</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold gradient-text mt-2">Kalender & Info Terkini</h2>
+                <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+                <!-- Jam & Tanggal -->
+                <div class="bg-white p-6 rounded-2xl shadow-elegant text-center">
+                    <i class="fa fa-clock-o text-3xl text-primary mb-3"></i>
+                    <div id="jam" class="text-3xl font-bold text-primary">--:--:--</div>
+                    <div id="tanggal" class="text-stone-600 mt-2">-- Hari -- ----</div>
+                </div>
+
+                <!-- Kalender Islam & Jawa -->
+                <div class="bg-white p-6 rounded-2xl shadow-elegant text-center">
+                    <i class="fa fa-moon-o text-3xl text-green-600 mb-3"></i>
+                    <h4 class="font-bold text-primary mb-2">Kalender Islam & Jawa</h4>
+                    <div id="kalender-islam" class="text-stone-700 font-medium">-- ------ ---- H</div>
+                    <div id="kalender-jawa" class="text-stone-600 text-sm mt-1">-- ------ ---- J</div>
+                    <div id="weton" class="text-stone-500 text-sm mt-1">Weton: --</div>
+                </div>
+
+                <!-- Cuaca Lumajang -->
+                <div class="bg-white p-6 rounded-2xl shadow-elegant text-center">
+                    <i class="fa fa-map-marker text-primary mb-1"></i>
+                    <span class="text-sm text-stone-500">Lumajang</span>
+                    <div class="flex items-center justify-center gap-2 my-2">
+                        <i id="cuaca-icon" class="fa fa-sun-o text-3xl text-yellow-500"></i>
+                        <span id="suhu" class="text-4xl font-bold text-dark">--°C</span>
+                    </div>
+                    <p id="kondisi-cuaca" class="text-stone-600">Sedang memuat...</p>
+                </div>
+
+                <!-- Berita Terkini -->
+                <div class="bg-white p-6 rounded-2xl shadow-elegant">
+                    <div class="text-center mb-3">
+                        <i class="fa fa-newspaper-o text-3xl text-primary"></i>
+                        <h4 class="font-bold text-primary mt-2">Berita Terkini</h4>
+                    </div>
+                    <ul id="berita" class="space-y-2 text-sm text-stone-600">
+                        <li class="flex items-start gap-2"><i class="fa fa-circle text-xs text-primary mt-1.5"></i><span>Memuat berita...</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK & LOKASI -->
+    <section id="kontak" class="py-20 md:py-28">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-accent font-medium text-sm">Hubungi Kami</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold gradient-text mt-2">Kontak & Lokasi</h2>
+                <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
+            </div>
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm">
+                        <i class="fa fa-map-marker text-xl text-primary mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">Alamat Kantor & Workshop</h4>
+                            <p class="text-stone-600">Jl. Mayor Kamari Sampurno No. 58, Kelurahan Ditotrunan, Kec. Lumajang, Kab. Lumajang, Jawa Timur — Kode Pos 67313</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4 p-4 bg-white rounded-xl shadow-sm">
+                        <i class="fa fa-whatsapp text-xl text-green-600 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-primary mb-1">WhatsApp</h4>
+                            <a href="https://wa.me/6282232694521" target="_blank" class="text-primary hover:underline">0822-3269-4521</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex flex-col justify-center gap-4">
+                    <a href="https://maps.app.goo.gl/oztaaH6toTZf8DxX6" target="_blank" class="w-full text-center bg-primary hover:bg-secondary text-white px-8 py-4 rounded-full font-medium transition-all shadow-md text-lg">
+                        <i class="fa fa-map-marker mr-2"></i> Buka Lokasi di Google Maps
+                    </a>
+                    <a href="https://wa.me/6282232694521?text=Halo%20LMJ%20INTERIOR%2CEKSTERIOR%2C%20saya%20ingin%20konsultasi%20dan%20memesan." target="_blank" class="w-full text-center bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-full font-medium transition-all shadow-md text-lg">
+                        <i class="fa fa-whatsapp mr-2"></i> Langsung Pesan via WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CHAT PEMESANAN -->
+    <section id="pesan" class="py-20 md:py-28 bg-gradient-to-b from-amber-50 to-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <span class="text-accent font-medium text-sm">Hubungi Langsung</span>
+                <h2 class="font-display text-3xl md:text-4xl font-bold gradient-text mt-2">Chat Pemesanan & Konsultasi</h2>
+                <div class="w-28 h-1.5 bg-gradient-to-r from-primary to-secondary mx-auto mt-4 rounded-full"></div>
+                <p class="text-stone-600 mt-3 max-w-xl mx-auto">Klik tombol di bawah untuk langsung mengirim pesan lewat WhatsApp.</p>
+            </div>
+            <div class="max-w-lg mx-auto text-center">
+                <a href="https://wa.me/6282232694521?text=Halo%20LMJ%20INTERIOR%2CEKSTERIOR%2C%20saya%20ingin%20konsultasi%20dan%20memesan%20jasa%20desain%2Fpengerjaan.%20Terima%20kasih." target="_blank" class="inline-flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white px-10 py-5 rounded-full text-xl font-medium transition-all shadow-xl">
+                    <i class="fa fa-whatsapp text-3xl"></i>
+                    <span>WhatsApp: 0822-3269-4521</span>
+                </a>
+                <p class="mt-6 text-stone-600 font-medium">Senin — Sabtu: 08.00 — 17.00 WIB</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4 text-center">
+            <p class="font-display text-2xl font-bold mb-2">LMJ INTERIOR EKSTERIOR</p>
+            <p class="text-stone-400 mb-4">Desain Bangunan & Interior · Produk Custom · Kontraktor Bangunan</p>
+            <p class="text-stone-400 text-sm mb-6">Jl. Mayor Kamari Sampurno No. 58, Kelurahan Ditotrunan, Kec. Lumajang, Kab. Lumajang, Jawa Timur — Kode Pos 67313</p>
+            <p class="text-stone-500 text-xs">© 2026 LMJ INTERIOR EKSTERIOR — Semua Hak Dilindungi.</p>
+        </div>
+    </footer>
+
+    <!-- ⚡ SCRIPT INFO HARIAN LENGKAP -->
     <script>
         // === 1. JAM & TANGGAL ===
         function updateJam() {
@@ -544,85 +587,7 @@
         async function ambilKalenderIslam() {
             try {
                 const tgl = new Date();
-                const res = await fetch(`https://api.aladhan.com/v1/gToH?date=${tgl.getDate()}-${tgl.getMonth()+1}-${tgl.getFullYear()}`);
-                const data = await res.json();
-                if (data.code === 200) {
-                    const hijri = data.data.hijri;
-                    document.getElementById('kalender-islam').textContent = 
-                        `${hijri.day} ${hijri.month.en} ${hijri.year} H`;
-                }
-            } catch {
-                document.getElementById('kalender-islam').textContent = 'Tidak dapat dimuat';
-            }
-        }
-        ambilKalenderIslam();
-
-        // === 3. KALENDER JAWA & WETON ===
-        function kalenderJawaDanWeton() {
-            const tgl = new Date();
-            const hariKe = Math.floor((tgl.getTime() / 86400000) + 3) % 5;
-            const pasaran = ['Legi','Pahing','Pon','Wage','Kliwon'];
-            const namaBulanJawa = ['Sura','Sapar','Mulud','Bakda Mulud','Jumadil Awal','Jumadil Akhir','Rejeb','Ruwah','Puasa','Sawal','Apit','Besar'];
-            const namaHariJawa = ['Dhadha','Soma','Anggara','Budha','Wrespati','Sukra','Saniscara'];
-            
-            const hariMasehi = tgl.getDay();
-            const weton = pasaran[(hariMasehi + hariKe) % 5];
-            const bulan = namaBulanJawa[Math.floor((tgl.getMonth() + 4) % 12)];
-            const tahun = 1928 + Math.floor((tgl.getFullYear() + (tgl.getMonth() >= 8 ? 1 : 0) - 1928) / 1);
-
-            document.getElementById('kalender-jawa').textContent = 
-                `${tgl.getDate()} ${bulan} ${tahun} J`;
-            document.getElementById('weton').textContent = 
-                `Weton: ${namaHariJawa[hariMasehi]} ${weton}`;
-        }
-        kalenderJawaDanWeton();
-
-        // === 4. CUACA LUMAJANG ===
-        async function ambilCuaca() {
-            try {
-                // Gunakan API cuaca terbuka
-                const res = await fetch('https://api.open-meteo.com/v1/forecast?latitude=-8.23&longitude=113.24&current=temperature_2m,weather_code&timezone=Asia%2FJakarta');
-                const data = await res.json();
-                const suhu = Math.round(data.current.temperature_2m);
-                const kodeCuaca = data.current.weather_code;
-
-                // Tentukan ikon & kondisi
-                let ikon = 'fa-sun-o', kondisi = 'Cerah';
-                if (kodeCuaca >= 45) { ikon = 'fa-cloud'; kondisi = 'Berawan'; }
-                if (kodeCuaca >= 51 && kodeCuaca <= 67) { ikon = 'fa-tint'; kondisi = 'Hujan'; }
-                if (kodeCuaca >= 71) { ikon = 'fa-cloud-rain'; kondisi = 'Hujan Lebat'; }
-
-                document.getElementById('suhu').textContent = `${suhu}°C`;
-                document.getElementById('cuaca-icon').className = `fa ${ikon} text-3xl ${kodeCuaca >=45 ? 'text-gray-500' : 'text-yellow-500'}`;
-                document.getElementById('kondisi-cuaca').textContent = kondisi;
-            } catch {
-                document.getElementById('suhu').textContent = '--°C';
-                document.getElementById('kondisi-cuaca').textContent = 'Gagal memuat';
-            }
-        }
-        ambilCuaca();
-
-        // === 5. BERITA TERKINI ===
-        async function ambilBerita() {
-            try {
-                const res = await fetch('https://api.sauravkumar.xyz/news?country=id&api-key=demo');
-                const data = await res.json();
-                const daftar = document.getElementById('berita');
-                daftar.innerHTML = '';
-                if (data.articles && data.articles.length > 0) {
-                    data.articles.slice(0,4).forEach(berita => {
-                        const li = document.createElement('li');
-                        li.className = 'flex items-start gap-2';
-                        li.innerHTML = `<i class="fa fa-circle text-xs text-primary mt-1.5"></i><span>${berita.title?.substring(0,55)}...</span>`;
-                        daftar.appendChild(li);
-                    });
-                } else {
-                    daftar.innerHTML = '<li class="flex items-start gap-2"><i class="fa fa-circle text-xs text-primary mt-1.5"></i><span>Berita tidak tersedia</span></li>';
-                }
-            } catch {
-                document.getElementById('berita').innerHTML = 
-                    '<li class="flex items-start gap-2"><i class="fa fa-circle text-xs text-primary mt-1.5"></i><span>Silakan cek sebentar lagi</span></li>';
-            }
-        }
-        ambilBerita();
-    </script>
+                const tanggal = tgl.getDate();
+                const bulan = tgl.getMonth() + 1;
+                const tahun = tgl.getFullYear();
+                const res = await fetch(`https://api.alad
